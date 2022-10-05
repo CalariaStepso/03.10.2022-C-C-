@@ -8,6 +8,7 @@
 #include <stdio.h>
 
 int s001 (int a);
+void s002 (void);
 
 int start(void) {
   int a=5;
@@ -17,11 +18,8 @@ int start(void) {
   printf("c=%d;",c );
   printf("a=%d;\n",a );
   printf("b=%d",b );
-  int d;
-  printf("Введите переменную d: ",c );
-  scanf("%d",&d);
-  printf("\nd=%d",d);
-  s001(d);
+  s002();
+
   return 0;
 }
 
@@ -35,5 +33,20 @@ else if (a==0){
 else {
   printf("\nПеременная a %d меньше 0");
 }
+
+}
+
+void s002 (void) {
+  int d;
+  printf("Введите переменную d: ",d );
+  scanf("%d",&d);
+  if ((d>0)){
+    printf("n\d=%d", d);
+    s001(d);
+  }
+  else {
+    printf("\nДанные введены неверно");
+    s002();
+  }
 
 }
