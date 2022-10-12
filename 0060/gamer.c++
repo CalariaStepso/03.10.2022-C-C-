@@ -28,8 +28,8 @@ class Autogamer
 public:
   void autopick(int *i, int *j) {
 
-srand(time(NULL));
-*i = rand()%3;
-*j = rand()%3;
-};
+      srand(time(NULL));
+        *i = rand()%3;
+        *j = rand()%3;
+ };
 };

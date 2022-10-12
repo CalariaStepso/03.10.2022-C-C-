@@ -18,16 +18,21 @@ private:
 public:
   Game(){
 
-    field_o.step(&a, &b);
+
     field_o.print();
-    bool flag=true;
+    int counter = 0;
+
     do {
-    field_o.autostep();
-    field_o.print();
-    field_o.step(&a, &b);
-    field_o.print();
-  } while(flag);
-  };
+      if (counter % 2 == 0){
+        field_o.step(&a, &b);
+      } else    field_o.autostep();
 
+        field_o.print();
+        field_o.win_or_not();
+        counter ++;
+  } while(counter < 9 );
 
+  cout << "Конец игры!";
+
+};
 };
